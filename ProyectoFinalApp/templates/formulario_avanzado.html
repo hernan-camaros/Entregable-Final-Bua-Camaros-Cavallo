@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripcion Avanzado</title>
+</head>
+<body>
+    <h2>Inscripcion al curso Avanzado:</h2>
+    <p></p>
+    <h4>Dejanos tus datos y nos contactaremos:</h4>
+    <p></p>
+    <p></p>
+    <form action = "/agregaravanzado" method="POST">
+        {% csrf_token %}
+
+        <table>
+
+        {{ form.as_table }}
+        
+        </table>    
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
+{% endblock %}
